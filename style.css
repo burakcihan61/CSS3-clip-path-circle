@@ -1,0 +1,48 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+section div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0e2330;
+}
+section div:nth-child(2){
+    background: tomato;
+    clip-path: circle(300px at center);
+}
+section div h1{
+    position: absolute;
+    left: 0;
+    font-size: 12em;
+    color: wheat;
+    white-space: nowrap;
+    line-height: 100vh;
+    cursor: default;
+    animation: animate 100s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+section div:nth-child(2) h1{
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: wheat;
+    color: transparent;
+}
